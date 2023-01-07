@@ -1,0 +1,15 @@
+{% block title %}
+  {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+
+
+  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  
+  <p>Phone: {{ mymember.phonenumber }}</p>
+  <p> <img class="thumbnail" src="{{ mymember.image }}"></p>
+  <p>Price per hour: {{ mymember.priceperhour }}</p>
+  
+  
+  <p>Back to <a href="{% url 'main' %}">Home page</a></p>
+  

@@ -1,0 +1,46 @@
+{% load static %}
+<DOCTYPE!>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/mycssfyle.css' %}">
+
+
+<div class="topnav">
+  <a class="active" href="{% url 'main' %}">Home page</a>
+  <a href="{% url 'crudapps' %}">list of workers</a>
+  <a href="#login">log in</a>
+</div>
+
+<div style="padding-left:16px">
+
+<h1>Workers</h1>
+  
+  <ul>
+    {% for x in mymembers %}
+      <li><a href="/ids/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% for x in mymembers %}
+  <div id="btnContainer">
+    <button class="btn" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+    <button class="btn active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+  </div>
+  <br>
+  
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2><li><a href="/ids/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li></h2>
+      
+    </div>
+    {% endfor %}
+  
+
+    <script type="text/javascript" src="{% static 'js/myJS.js' %}"></script>
+
+  
+
+
+  <div class="footer">
+    <p>Footer</p>
+  </div>
