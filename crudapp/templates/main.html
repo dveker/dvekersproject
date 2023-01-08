@@ -8,7 +8,7 @@
 <body>
 <div class="topnav">
   <a class="active" href="{% url 'main' %}">Home page</a>
-  <a href="crudapps/">list of workers</a>
+  <a href="{% url 'crudapps' %}">list of workers</a>
   <a href="#login">log in</a>
 </div>
 
@@ -16,7 +16,7 @@
 
 
   
-  <p>Check out all our <a href="crudapps/">workers</a></p>
+  <p>Check out all our <a href="{% url 'crudapps' %}">workers</a></p>
 </body>
 </html>
 
